@@ -23,30 +23,20 @@ var config = {
     },
 
     module: {
-        loaders: [ {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader',
-
-            query: {
-                presets: ['es2015', 'react']
+        loaders: [
+            {
+                test: /\.js[x]?$/,
+                exclude: /node_modules/,
+                loader: "babel-loader"
             },
-
-        },
             {
                 test: /\.css$/,
-                loader: 'style!css',
-                include: __dirname,
-            },
-            {
-                test: /\.(jpg|png|svg)$/,
-                loader: "url?limit=8192"
-            },
-
+                loader: "style-loader!css-loader"
+            }
         ]
     },
     plugins: [
-    ],
+    ]
 
 };
 

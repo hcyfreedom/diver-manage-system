@@ -1,12 +1,21 @@
 import React from 'react';  //导入react相关模块
 import ReactDOM from 'react-dom';
-import App from './Order/App.js';  //导入App组件所在的模块文件
-import SubNav from './SubNav/SubNav';
 
-class Main extends React.Component {
-    render () {
-        return (
-            <App/>
+import {Switch, Router, Route, Redirect, Link} from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory'
+import Panel from './SubNav/Panel'
+
+
+const history = createHistory();
+
+class Main extends React.Component{
+    render(){
+        return(
+            <Router history={history}>
+                <Switch>
+                    <Route path="/diver/:id" component={Panel}/>
+                </Switch>
+            </Router>
         )
     }
 }
