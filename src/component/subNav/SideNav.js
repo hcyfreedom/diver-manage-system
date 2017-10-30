@@ -6,18 +6,24 @@ const SubMenu = Menu.SubMenu;
 import {Link} from 'react-router-dom';
 
 export default class SideNav extends React.Component {
+    constructor(props){
+        super(props)
+    }
+
+
 
     render (){
+
         return (
             <div>
-                <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-                    <Menu.Item key="1">
+                <Menu theme="dark" defaultSelectedKeys={this.props.defaultSelectedKeys} mode="inline">
+                    <Menu.Item key="/diver/orderList">
                         <Link to="/diver/orderList">
                             <Icon type="pie-chart" />
                             <span>订单管理</span>
                         </Link>
                     </Menu.Item>
-                    <Menu.Item key="2">
+                    <Menu.Item key="/diver/studentList">
                         <Link to="/diver/studentList">
                             <Icon type="desktop" />
                             <span>学员管理</span>
@@ -27,16 +33,18 @@ export default class SideNav extends React.Component {
                         key="sub1"
                         title={<span><Icon type="user" /><span>理论学习管理</span></span>}
                     >
-                        <Menu.Item key="3">Tom</Menu.Item>
-                        <Menu.Item key="4">Bill</Menu.Item>
-                        <Menu.Item key="5">Alex</Menu.Item>
+                       <Menu.Item key="/diver/theory/base"> <Link to="/diver/theory/base">基本情况管理</Link></Menu.Item>
+                        <Menu.Item key="/diver/theory/rule"><Link to="/diver/theory/rule">测考设置</Link></Menu.Item>
                     </SubMenu>
                     <SubMenu
                         key="sub2"
                         title={<span><Icon type="team" /><span>营销管理</span></span>}
                     >
-                        <Menu.Item key="6">Team 1</Menu.Item>
-                        <Menu.Item key="8">Team 2</Menu.Item>
+                        <Menu.Item key="/diver/market/package"><Link to="/diver/market/package">学车套餐</Link></Menu.Item>
+                        <Menu.Item key="/diver/market/group"><Link to="/diver/market/group">组团学车</Link></Menu.Item>
+                        <Menu.Item key="/diver/market/minapps"><Link to="/diver/market/minapps">小程序信息</Link></Menu.Item>
+                        <Menu.Item key="/diver/market/agency"><Link to="/diver/market/agency">代理管理</Link></Menu.Item>
+
                     </SubMenu>
                     <Menu.Item key="9">
                         <Icon type="file" />

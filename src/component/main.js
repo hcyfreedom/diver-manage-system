@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import {Switch, Router, Route, Redirect, Link} from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory'
-import Panel from './SubNav/Panel'
+import Panel from './subNav/Panel'
 
 
 const history = createHistory();
