@@ -6,16 +6,22 @@ import createHistory from 'history/createBrowserHistory'
 import Panel from './subNav/Panel'
 
 
+import {Provider} from 'react-redux';
+import configureStore from '../store/configureStore';
+
+let store = configureStore();
 const history = createHistory();
 
 class Main extends React.Component{
     render(){
         return(
-            <Router history={history}>
-                <Switch>
-                    <Route path="/diver/:id" component={Panel}/>
-                </Switch>
-            </Router>
+            <Provider store={store}>
+                <Router history={history}>
+                    <Switch>
+                        <Route path="/diver/:id" component={Panel}/>
+                    </Switch>
+                </Router>
+            </Provider>
         )
     }
 }

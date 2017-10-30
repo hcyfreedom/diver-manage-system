@@ -17,6 +17,8 @@ import Package from '../market/package/Package';
 import Group from '../market/group/Group';
 import Agency from '../market/agency/Agency';
 
+import Test from '../Cart/CartHomePage';
+
 class SubNav extends React.Component {
     constructor(props) {
         super(props);
@@ -51,12 +53,13 @@ class SubNav extends React.Component {
                         <div style={{background: '#fff', minHeight: 360 }}>
                             <Switch>
                                 {/*<Route path="/diver/orderList" component={OrderList}/>*/}
-                                <Route path="/diver/studentList" component={StudentList}/>
+                                <Route path="/diver/studentList" component={Test}/>
                                 <Route path="/diver/theory/base" component={TheoryBase}/>
                                 <Route path="/diver/theory/rule" component={RuleMaking}/>
                                 <Route path="/diver/market/package" component={Package}/>
                                 <Route path="/diver/market/group" component={Group}/>
                                 <Route path="/diver/market/agency" component={Agency}/>
+                                <Route path="/a" component={Test}/>
                             </Switch>
                         </div>
                     </Content>

@@ -1,0 +1,30 @@
+{
+  "code": 200,
+  "msg": [
+    {
+      "id": 1,
+      "classifyName": "保健品",
+      "classifyImg":"/imgs/cc1.png"
+    },
+    {
+      "id": 2,
+      "classifyName": "美容产品",
+      "classifyImg":"/imgs/cc1.png"
+    },
+    {
+      "id": 3,
+      "classifyName": "美容产品",
+      "classifyImg":"/imgs/cc1.png"
+    },
+    {
+      "id": 4,
+      "classifyName": "美容产品",
+      "classifyImg":"/imgs/cc2.png"
+    },
+    {
+      "id": 5,
+      "classifyName": "美容产品",
+      "classifyImg":"/imgs/cc3.png"
+    }
+  ]
+}
